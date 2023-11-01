@@ -10,10 +10,10 @@ pipeline {
             }
             steps {
                echo "Building release ${RELEASE} with log level ${LOG_LEVEL}..."
-               sh 'chmod +x jenkins-demos/demo3.2/build.sh'
+               sh 'chmod +x demo3.2/build.sh'
                withCredentials([string(credentialsId: 'slack-token', variable: 'API_KEY')]) {
                   sh '''
-                     ./jenkins-demos/demo3.2/build.sh
+                     ./demo3.2/build.sh
                   '''
                }
             }
