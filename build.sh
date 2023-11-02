@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Using API key: $API_KEY"
+echo "Using API key: $SLACK_TOKEN"
